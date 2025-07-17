@@ -1,80 +1,163 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Konstantinos Tsanaktsis - CV</title>
   <link rel="stylesheet" href="style.css" />
+  <script defer src="script.js"></script>
 </head>
+
 <body>
-  <img src="assets/download-icon.png" class="download-icon" onclick="window.print()" title="Download as PDF" alt="Download"/>
-
-  <div class="container">
-    <aside class="sidebar">
-      <img src="assets/tsanaPFP.jpg" alt="Profile Picture" class="profile-img"/>
-      <h1>Konstantinos Tsanaktsis</h1>
-      <p><strong>Date of Birth:</strong><br/>21/05/2000</p>
-      <p><strong>Languages:</strong><br/>Greek (native), English (proficient)</p>
-      <p><strong>Phone:</strong><br/>+30 6987325635</p>
-      <p><strong>Email:</strong><br/>
-        <a href="mailto:kostas.tsan@hotmail.com">kostas.tsan@hotmail.com</a>
-      </p>
-      <p><strong>LinkedIn:</strong><br/>
-        <a class="link-inline" href="https://www.linkedin.com/in/kostas-tsanaktsis-301847242" target="_blank" rel="noopener noreferrer">https://www.linkedin.com/in/kostas-tsanaktsis</a>
-      </p>
-      <p><strong>GitHub:</strong><br/>
-        <a class="link-inline" href="https://github.com/kostastsanak" target="_blank" rel="noopener noreferrer">github.com/kostastsanak</a>
-      </p>
-      <p><strong>Education:</strong><br/>BSc in Computer Science,<br/>CSD - Heraklion, Crete</p>
-    </aside>
-
-    <main class="content">
-      <section class="intro">
-        <h2>About Me</h2>
-        <p>I am a backend developer with a strong foundation in system design, API architecture, and DevOps practices. My experience ranges from enterprise backend development with C# and SQL to full-stack architecture in Django and Kubernetes. Passionate about creating scalable and maintainable backend systems, and comfortable taking responsibility in demanding environments.</p>
-      </section>
-
-      <section>
-        <h2>Professional Experience</h2>
-
-        <div class="job">
-          <h3>Qrealm (Remote, Athens) | 2023 - 2024</h3>
-          <p><strong>Role:</strong> Backend Engineer / DevOps</p>
-          <ul>
-            <li>Designed and implemented full RESTful APIs using Django and PostgreSQL for a startup’s core services.</li>
-            <li>Handled authentication via Google OAuth2 and JWT, ensuring secure and scalable login flows.</li>
-            <li>Integrated Stripe for subscription billing and webhook-based events.</li>
-            <li>Configured cloud infrastructure using Azure, Kubernetes clusters with Helm, and automated provisioning via Terraform.</li>
-            <li>Orchestrated background jobs using Celery and RabbitMQ for async payment processing and notifications.</li>
-            <li>Deployed production systems behind NGINX with custom SSL and reverse proxy rules.</li>
-          </ul>
-        </div>
-
-        <div class="job">
-          <h3>Greek Ferries (Heraklion) | 2022 - 2023</h3>
-          <p><strong>Role:</strong> Backend Developer</p>
-          <ul>
-            <li>Built internal tools and endpoints in C# integrated with MySQL databases for fleet management systems.</li>
-            <li>Created reusable logic layers for endpoint parsing, validation, and output formatting.</li>
-            <li>Refactored legacy DB access logic into optimized stored procedures improving performance by 30%.</li>
-          </ul>
-        </div>
-
-        <div class="job">
-          <h3>Military Service | Cyprus | 2024 - 2025</h3>
-          <p><strong>Status:</strong> Completed mandatory military service.</p>
-        </div>
-      </section>
-
-      <section>
-        <h2>Earlier Projects (2018 - 2022)</h2>
-        <ul>
-          <li>Developed indie games in Unity using C# and managed complete game logic, physics, and UI.</li>
-          <li>Built a full compiler from scratch in university with lex/yacc equivalents for Greek-style syntax.</li>
-          <li>Worked on low-level router-to-router path-finding protocols and simulation projects.</li>
-        </ul>
-      </section>
-    </main>
+  <div class="download-toggle-container">
+    <a href="assets/tsanaktsis-cv.pdf" download class="download-link" title="Download PDF">
+      <img src="assets/download-icon.png" alt="Download PDF" class="icon large-icon" />
+    </a>
+    <button id="theme-toggle" title="Toggle Dark Mode" class="theme-toggle">🌙</button>
   </div>
+
+  <button id="terminal-toggle" title="Access Terminal Mode" class="terminal-toggle">Enter Terminal</button>
+
+  <!-- NEW: Dark Overlay -->
+  <div id="terminal-overlay" class="terminal-overlay hidden"></div>
+
+  <!-- Terminal Interface with Matrix Rain -->
+  <div id="terminal-container" class="terminal-container">
+    <div class="matrix-rain" id="matrix-rain"></div>
+    
+    <div class="terminal-header">
+      <span class="terminal-title">TSANAKTSIS_CV_TERMINAL v2.0</span>
+      <button id="terminal-close" class="terminal-close">×</button>
+    </div>
+    <div id="terminal-output">
+      <!-- Starting messages will be dynamically generated by JavaScript -->
+    </div>
+    <div class="terminal-input-line">
+      <span class="terminal-prompt">root@tsanaktsis-cv:~$</span>
+      <input type="text" id="terminal-input" class="terminal-input" autocomplete="off" />
+      <span class="terminal-cursor">_</span>
+    </div>
+  </div>
+
+  <main class="cv">
+    <header>
+      <h1>Konstantinos Tsanaktsis</h1>
+      <div class="contact">
+        <span>📞 (+30) 6989876543</span>
+        <span class="contact-link">
+          <span class="icon">✉️</span>
+          <a href="mailto:konstantinos.tsanaktsis@gmail.com">
+            konstantinos.tsanaktsis@gmail.com
+          </a>
+        </span>
+        <span class="contact-link">
+          <span class="icon">🔗</span>
+          <a href="https://linkedin.com/in/ktsanaktsis" target="_blank">
+            linkedin.com/in/ktsanaktsis
+          </a>
+        </span>
+        <span class="contact-link">
+          <span class="icon">💻</span>
+          <a href="https://github.com/tsanaktsis" target="_blank">
+            github.com/tsanaktsis
+          </a>
+        </span>
+      </div>
+    </header>
+
+    <section class="summary">
+      <p>
+        Backend developer with over 2 years of professional experience specializing in C# and cloud technologies. Proven expertise in building scalable microservice architectures, managing Azure infrastructure, and developing secure payment systems. Experienced in both enterprise and startup environments with full ownership of critical infrastructure components.
+      </p>
+    </section>
+
+    <section class="experience">
+      <h2>Experience</h2>
+
+      <div class="job">
+        <h3>Cloud Backend Developer at Qrealm <span>October 2023 – July 2024</span></h3>
+        <p>Led backend development and infrastructure management for a circular hospitality platform connecting hotels, affiliates, and clients.</p>
+        <ul>
+          <li>Architected and maintained REST APIs using <strong>Django</strong> and <strong>PostgreSQL</strong> for comprehensive booking and marketing systems.</li>
+          <li>Managed complete <strong>Azure</strong> infrastructure including <strong>Kubernetes</strong> clusters, load balancers, and database scaling.</li>
+          <li>Developed dynamic advertising automation using <strong>Meta</strong> and <strong>Google Ads APIs</strong> for targeted hotel marketing campaigns.</li>
+          <li>Implemented secure payment processing with <strong>Stripe</strong>, handling bookings, refunds, and affiliate commission calculations.</li>
+          <li>Built automated HTTPS certificate management using <strong>OpenResty</strong> and <strong>Lua</strong> for dynamic hotel owner subdomains.</li>
+          <li>Designed reliable email delivery system using <strong>Celery</strong> + <strong>RabbitMQ</strong> to ensure zero transactional email loss.</li>
+          <li>Integrated <strong>JWT</strong> authentication and HTTPS security layers using <strong>Django</strong> libraries and <strong>Azure</strong> certificates.</li>
+          <li>Automated infrastructure deployment and management using <strong>Terraform</strong> for <strong>Azure</strong> resource provisioning.</li>
+          <li>Configured CI/CD pipelines with <strong>Docker</strong> and <strong>Azure DevOps</strong> for seamless microservice deployment.</li>
+        </ul>
+      </div>
+
+      <div class="job">
+        <h3>Backend Developer at Ecoworld SA – Greek Ferries <span>August 2022 – September 2023</span></h3>
+        <p>Developed and maintained core backend systems for a comprehensive travel and ferry booking platform.</p>
+        <ul>
+          <li>Built robust <strong>C#</strong> + <strong>LINQ</strong> endpoints for user authentication, advanced data filtering, and automated testing.</li>
+          <li>Optimized <strong>MySQL</strong> database queries and schemas for efficient handling of large-scale booking and supplier datasets.</li>
+          <li>Implemented comprehensive data filtering and search functionality to enhance user experience.</li>
+        </ul>
+      </div>
+
+      <div class="job">
+        <h3>Freelance & University Projects <span>2018 – 2022</span></h3>
+        <ul>
+          <li>Developed <strong>Unity</strong>-based 2D games with <strong>C#</strong> including custom networking and multiplayer systems.</li>
+          <li>Created a complete compiler implementation as part of advanced computer science coursework.</li>
+          <li>Built various backend applications and research projects demonstrating passion for software development.</li>
+        </ul>
+      </div>
+    </section>
+
+    <section class="skills">
+      <h2>Skills & Technologies</h2>
+      <div class="columns">
+        <div>
+          <h4>Core Languages</h4>
+          <p>C#, Python, Bash, SQL</p>
+        </div>
+        <div>
+          <h4>Cloud & Infrastructure</h4>
+          <p>Azure, Kubernetes, Docker, Terraform, Azure DevOps</p>
+        </div>
+        <div>
+          <h4>Backend Technologies</h4>
+          <p>Django, PostgreSQL, MySQL, REST APIs, JWT, LINQ</p>
+        </div>
+        <div>
+          <h4>Specialized Tools</h4>
+          <p>Stripe, Meta/Google Ads APIs, Celery, RabbitMQ, OpenResty, Nginx</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="education">
+      <h2>Education</h2>
+      <ul>
+        <li>
+          Computer Science BSc – University of Crete (2018 – 2023)
+        </li>
+      </ul>
+    </section>
+
+    <section class="military">
+      <h2>Military Service</h2>
+      <ul>
+        <li>
+          Greek Military Service in Cyprus – Completed mandatory military service (2024 – 2025)
+        </li>
+      </ul>
+    </section>
+
+    <section class="languages">
+      <h2>Languages</h2>
+      <ul>
+        <li>Greek: Native</li>
+        <li>English: Proficient</li>
+      </ul>
+    </section>
+  </main>
 </body>
 </html>
