@@ -1,0 +1,198 @@
+@media print {
+  .terminal-toggle,
+  .download-toggle-container,
+  .terminal-container,
+  .terminal-overlay {
+    display: none !important;
+  }
+  
+  @page {
+    size: A4;
+    margin: 0.3in 0.5in; /* Reduced to eliminate header/footer space */
+  }
+  
+  body {
+    font-family: 'Segoe UI', Arial, sans-serif;
+    font-size: 11pt; /* INCREASED: From 10.5pt to 11pt */
+    line-height: 1.3;
+    color: #000;
+    margin: 0;
+    padding: 0;
+    background: white;
+    -webkit-print-color-adjust: exact;
+  }
+  
+  main.cv {
+    max-width: 100%;
+    margin: 0;
+    padding: 0;
+  }
+  
+  header h1 {
+    font-size: 24.5pt; /* INCREASED: +0.5pt */
+    margin-bottom: 6pt;
+    text-align: center;
+    color: #0077cc;
+  }
+  
+  /* FIXED: Contact info to prevent line wrapping */
+  .contact {
+    display: flex;
+    justify-content: space-between;
+    font-size: 9.5pt; /* INCREASED: +0.5pt but kept compact */
+    margin-bottom: 14pt;
+    flex-wrap: nowrap;
+    gap: 3pt;
+    align-items: center;
+  }
+  
+  .contact span {
+    white-space: nowrap;
+    flex-shrink: 0;
+    font-size: 9.5pt;
+  }
+  
+  .contact-link {
+    display: inline-flex;
+    align-items: center;
+    gap: 1pt;
+    flex-shrink: 0;
+  }
+  
+  .contact-link a {
+    color: #000;
+    text-decoration: none;
+    font-size: 9.5pt;
+  }
+  
+  h2 {
+    font-size: 14.5pt; /* INCREASED: +0.5pt */
+    color: #0077cc;
+    border-bottom: 1pt solid #0077cc;
+    padding-bottom: 2pt;
+    margin-top: 12pt;
+    margin-bottom: 8pt;
+  }
+  
+  section {
+    margin-bottom: 10pt;
+    padding: 0;
+    background: none;
+    box-shadow: none;
+    border-radius: 0;
+  }
+  
+  .job {
+    margin-bottom: 10pt;
+    page-break-inside: avoid;
+  }
+  
+  .job h3 {
+    font-size: 12.5pt; /* INCREASED: +0.5pt */
+    color: #0077cc;
+    margin-bottom: 3pt;
+    display: block;
+    margin-top: 0;
+  }
+  
+  .job h3 span {
+    font-size: 10.5pt; /* INCREASED: +0.5pt */
+    color: #666;
+    font-weight: normal;
+    float: right;
+  }
+  
+  .job p {
+    font-size: 10.5pt; /* INCREASED: +0.5pt */
+    font-style: italic;
+    margin-bottom: 5pt;
+    color: #333;
+    margin-top: 0;
+  }
+  
+  .job ul {
+    margin: 0;
+    padding-left: 15pt;
+    font-size: 10.5pt; /* INCREASED: +0.5pt */
+  }
+  
+  .job li {
+    margin-bottom: 2pt;
+    line-height: 1.25;
+  }
+  
+  .job li strong {
+    color: #000;
+    font-weight: 600;
+  }
+  
+  .columns {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 14pt;
+    margin-top: 0;
+    margin-bottom: 6pt;
+  }
+  
+  .columns > div {
+    margin-bottom: 0;
+  }
+  
+  .columns h4 {
+    color: #0077cc;
+    font-size: 11.5pt; /* INCREASED: +0.5pt */
+    margin-bottom: 3pt;
+    margin-top: 6pt;
+  }
+  
+  .columns h4:first-child {
+    margin-top: 0;
+  }
+  
+  .columns p {
+    font-size: 10.5pt; /* INCREASED: +0.5pt */
+    margin: 0 0 5pt 0;
+  }
+  
+  .summary p {
+    font-size: 11.5pt; /* INCREASED: +0.5pt */
+    margin: 0;
+    text-align: justify;
+    line-height: 1.3;
+  }
+  
+  .education ul,
+  .languages ul {
+    margin: 0;
+    padding-left: 15pt;
+  }
+  
+  .education li,
+  .languages li {
+    margin-bottom: 2pt;
+    font-size: 9.5pt; /* INCREASED: +0.5pt */
+    line-height: 1.25;
+  }
+  
+  .languages {
+    margin-bottom: 6pt;
+  }
+  
+  ul {
+    margin: 0;
+    padding-left: 15pt;
+  }
+  
+  li {
+    margin-bottom: 2pt;
+    font-size: 10.5pt; /* INCREASED: +0.5pt */
+  }
+  
+  .job, .columns > div {
+    page-break-inside: avoid;
+  }
+  
+  .experience {
+    page-break-before: avoid;
+  }
+}

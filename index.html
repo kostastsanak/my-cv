@@ -5,15 +5,23 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Konstantinos Tsanaktsis - CV</title>
-  <link rel="stylesheet" href="style.css" />
-  <script defer src="script.js"></script>
+  <link rel="stylesheet" href="styles/main.css" />
+  <link rel="stylesheet" href="styles/terminal.css" />
+  <link rel="stylesheet" href="styles/print.css" />
+  <script defer src="scripts/matrix-rain.js"></script>
+  <script defer src="scripts/terminal.js"></script>
+  <script defer src="scripts/main.js"></script>
 </head>
 
 <body>
   <div class="download-toggle-container">
-    <!-- Fixed Download Button - Now uses Unicode icon and proper styling -->
+    <!-- Updated Download Button with SVG icon -->
     <button id="download-btn" class="download-btn" title="Download PDF">
-      📄
+      <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor">
+        <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+        <polyline points="7,10 12,15 17,10" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+        <line x1="12" y1="15" x2="12" y2="3" stroke-width="2" stroke-linecap="round"/>
+      </svg>
     </button>
     <button id="theme-toggle" title="Toggle Dark Mode" class="theme-toggle">🌙</button>
   </div>
@@ -50,7 +58,7 @@
     <header>
       <h1>Konstantinos Tsanaktsis</h1>
       <div class="contact">
-        <span>📞 (+30) 6989876543</span>
+        <span>📞 (+30) 6987325635</span>
         <span class="contact-link">
           <span class="icon">✉️</span>
           <a href="mailto:konstantinos.tsanaktsis@gmail.com">
@@ -74,7 +82,7 @@
 
     <section class="summary">
       <p>
-        Backend developer with over 2 years of professional experience specializing in C# and cloud technologies. Proven expertise in building scalable microservice architectures, managing Azure infrastructure, and developing secure payment systems. Experienced in both enterprise and startup environments with full ownership of critical infrastructure components.
+        Backend developer with 2+ years of professional experience in C# and cloud technologies. Expertise in scalable microservice architectures, Azure infrastructure management, and secure payment systems. Proven track record in enterprise and startup environments.
       </p>
     </section>
 
@@ -85,34 +93,32 @@
         <h3>Cloud Backend Developer at Qrealm <span>October 2023 – July 2024</span></h3>
         <p>Led backend development and infrastructure management for a circular hospitality platform connecting hotels, affiliates, and clients.</p>
         <ul>
-          <li>Architected and maintained REST APIs using <strong>Django</strong> and <strong>PostgreSQL</strong> for comprehensive booking and marketing systems.</li>
-          <li>Managed complete <strong>Azure</strong> infrastructure including <strong>Kubernetes</strong> clusters, load balancers, and database scaling.</li>
-          <li>Developed dynamic advertising automation using <strong>Meta</strong> and <strong>Google Ads APIs</strong> for targeted hotel marketing campaigns.</li>
-          <li>Implemented secure payment processing with <strong>Stripe</strong>, handling bookings, refunds, and affiliate commission calculations.</li>
-          <li>Built automated HTTPS certificate management using <strong>OpenResty</strong> and <strong>Lua</strong> for dynamic hotel owner subdomains.</li>
-          <li>Designed reliable email delivery system using <strong>Celery</strong> + <strong>RabbitMQ</strong> to ensure zero transactional email loss.</li>
-          <li>Integrated <strong>JWT</strong> authentication and HTTPS security layers using <strong>Django</strong> libraries and <strong>Azure</strong> certificates.</li>
-          <li>Automated infrastructure deployment and management using <strong>Terraform</strong> for <strong>Azure</strong> resource provisioning.</li>
-          <li>Configured CI/CD pipelines with <strong>Docker</strong> and <strong>Azure DevOps</strong> for seamless microservice deployment.</li>
+          <li>Architected REST APIs using <strong>Django</strong> and <strong>PostgreSQL</strong> for booking and marketing systems.</li>
+          <li>Managed complete <strong>Azure</strong> infrastructure including <strong>Kubernetes</strong> clusters and database scaling.</li>
+          <li>Developed advertising automation using <strong>Meta</strong> and <strong>Google Ads APIs</strong> for targeted campaigns.</li>
+          <li>Implemented secure payment processing with <strong>Stripe</strong> for bookings, refunds, and commissions.</li>
+          <li>Built automated HTTPS certificate management using <strong>OpenResty</strong> and <strong>Lua</strong> for dynamic subdomains.</li>
+          <li>Designed email delivery system using <strong>Celery + RabbitMQ</strong> ensuring zero transactional loss.</li>
+          <li>Configured CI/CD pipelines with <strong>Docker</strong> and <strong>Azure DevOps</strong> for microservice deployment.</li>
         </ul>
       </div>
 
       <div class="job">
         <h3>Backend Developer at Ecoworld SA – Greek Ferries <span>August 2022 – September 2023</span></h3>
-        <p>Developed and maintained core backend systems for a comprehensive travel and ferry booking platform.</p>
+        <p>Developed core backend systems for comprehensive travel and ferry booking platform.</p>
         <ul>
-          <li>Built robust <strong>C#</strong> + <strong>LINQ</strong> endpoints for user authentication, advanced data filtering, and automated testing.</li>
-          <li>Optimized <strong>MySQL</strong> database queries and schemas for efficient handling of large-scale booking and supplier datasets.</li>
-          <li>Implemented comprehensive data filtering and search functionality to enhance user experience.</li>
+          <li>Built robust <strong>C# + LINQ</strong> endpoints for authentication, data filtering, and automated testing.</li>
+          <li>Optimized <strong>MySQL</strong> database queries and schemas for large-scale booking datasets.</li>
+          <li>Implemented comprehensive search functionality enhancing user experience.</li>
         </ul>
       </div>
 
       <div class="job">
-        <h3>Freelance & University Projects <span>2018 – 2022</span></h3>
+        <h3>Freelance & University Projects <span>September 2018 – December 2022</span></h3>
         <ul>
-          <li>Developed <strong>Unity</strong>-based 2D games with <strong>C#</strong> including custom networking and multiplayer systems.</li>
-          <li>Created a complete compiler implementation as part of advanced computer science coursework.</li>
-          <li>Built various backend applications and research projects demonstrating passion for software development.</li>
+          <li>Developed <strong>Unity</strong>-based 2D & 3D games with <strong>C#</strong> networking and multiplayer systems.</li>
+          <li>Created complete compiler implementation for advanced computer science coursework.</li>
+          <li>Built various backend applications demonstrating software development expertise.</li>
         </ul>
       </div>
     </section>
@@ -123,45 +129,30 @@
         <div>
           <h4>Core Languages</h4>
           <p>C#, Python, Bash, SQL</p>
+          <h4>Specialized Tools</h4>
+          <p>Stripe, Meta/Google Ads APIs, Celery, RabbitMQ, OpenResty, Nginx</p>
         </div>
         <div>
           <h4>Cloud & Infrastructure</h4>
           <p>Azure, Kubernetes, Docker, Terraform, Azure DevOps</p>
-        </div>
-        <div>
           <h4>Backend Technologies</h4>
           <p>Django, PostgreSQL, MySQL, REST APIs, JWT, LINQ</p>
-        </div>
-        <div>
-          <h4>Specialized Tools</h4>
-          <p>Stripe, Meta/Google Ads APIs, Celery, RabbitMQ, OpenResty, Nginx</p>
         </div>
       </div>
     </section>
 
     <section class="education">
-      <h2>Education</h2>
+      <h2>Education & Service</h2>
       <ul>
-        <li>
-          Computer Science BSc – University of Crete (2018 – 2023)
-        </li>
-      </ul>
-    </section>
-
-    <section class="military">
-      <h2>Military Service</h2>
-      <ul>
-        <li>
-          Greek Military Service in Cyprus – Completed mandatory military service (2024 – 2025)
-        </li>
+        <li><strong>Computer Science BSc</strong> – University of Crete (2018 – 2023)</li>
+        <li><strong>Greek Military Service</strong> – Cyprus (2024 – 2025)</li>
       </ul>
     </section>
 
     <section class="languages">
       <h2>Languages</h2>
       <ul>
-        <li>Greek: Native</li>
-        <li>English: Proficient</li>
+        <li>Greek: Native • English: Proficient</li>
       </ul>
     </section>
   </main>

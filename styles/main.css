@@ -1,0 +1,317 @@
+:root {
+  --bg-color: #ffffff;
+  --text-color: #000000;
+  --accent-color: #0077cc;
+  --section-bg: #f8f9fa;
+  --icon-filter: invert(0);
+  --link-color: #000000;
+  --highlight-color: #000000;
+}
+
+body.dark {
+  --bg-color: #121212;
+  --text-color: #f0f0f0;
+  --accent-color: #4ea8de;
+  --section-bg: #1e1e1e;
+  --icon-filter: invert(1);
+  --link-color: #f0f0f0;
+  --highlight-color: #66b3ff;
+}
+
+body {
+  font-family: 'Segoe UI', -apple-system, BlinkMacSystemFont, sans-serif;
+  background-color: var(--bg-color);
+  color: var(--text-color);
+  margin: 0;
+  padding: 0;
+  line-height: 1.6;
+}
+
+body.no-scroll {
+  overflow: hidden;
+}
+
+main.cv {
+  max-width: 900px;
+  margin: 3rem auto;
+  padding: 2rem;
+}
+
+header h1 {
+  text-align: center;
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+}
+
+h1, h2, h3 {
+  margin-top: 0;
+  color: var(--accent-color);
+}
+
+h2 {
+  border-bottom: 2px solid var(--accent-color);
+  padding-bottom: 0.25em;
+  font-size: 1.4rem;
+  margin-top: 0;
+  margin-bottom: 1rem;
+}
+
+header .contact {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  font-size: 0.95rem;
+  gap: 0.4rem;
+  margin-top: 0.5rem;
+  flex-wrap: wrap;
+}
+
+.contact-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.25rem;
+}
+
+.contact-link a {
+  color: var(--link-color);
+  text-decoration: none;
+  border-bottom: 1px solid transparent;
+  transition: all 0.2s ease;
+}
+
+.contact-link a:hover,
+.contact-link a:focus {
+  text-decoration: underline;
+  color: var(--accent-color);
+}
+
+section {
+  background: var(--section-bg);
+  padding: 1.2rem;
+  border-radius: 8px;
+  margin-top: 1.2rem;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.summary {
+  text-align: left;
+  font-size: 1.05rem;
+}
+
+.summary p {
+  margin: 0;
+}
+
+.job {
+  margin-bottom: 1.5rem;
+}
+
+.job:last-child {
+  margin-bottom: 0;
+}
+
+.job h3 {
+  font-size: 1.2rem;
+  margin-bottom: 0.5rem;
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  color: var(--accent-color);
+  margin-top: 0;
+}
+
+.job h3 span {
+  font-size: 0.9rem;
+  color: var(--text-color);
+  font-weight: normal;
+}
+
+.job p {
+  margin-bottom: 0.6rem;
+  font-style: italic;
+  color: var(--text-color);
+  margin-top: 0;
+}
+
+.job ul {
+  padding-left: 1.2rem;
+  margin: 0;
+}
+
+.job li {
+  margin-bottom: 0.3rem;
+}
+
+.job li strong {
+  color: var(--highlight-color);
+  font-weight: 600;
+}
+
+.columns {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 1.5rem;
+  margin-top: 0;
+}
+
+.columns > div {
+  min-width: 200px;
+}
+
+.columns h4 {
+  margin-bottom: 0.4rem;
+  color: var(--accent-color);
+  font-size: 1.1rem;
+  margin-top: 0;
+}
+
+.columns p {
+  margin: 0;
+  font-size: 0.95rem;
+}
+
+.education ul,
+.languages ul {
+  margin: 0;
+  padding-left: 1.2rem;
+}
+
+.education li,
+.languages li {
+  margin-bottom: 0.3rem;
+}
+
+.download-toggle-container {
+  position: fixed;
+  top: 1rem;
+  right: 1rem;
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  z-index: 1000;
+}
+
+.download-btn {
+  background: none;
+  border: none;
+  cursor: pointer;
+  color: var(--text-color);
+  transition: all 0.3s ease;
+  padding: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: auto;
+  height: auto;
+}
+
+.download-btn:hover {
+  color: var(--accent-color);
+  transform: translateY(-1px);
+}
+
+.download-btn svg {
+  width: 22px;
+  height: 22px;
+  stroke: currentColor;
+  transition: all 0.3s ease;
+}
+
+#theme-toggle {
+  background: none;
+  border: none;
+  cursor: pointer;
+  font-size: 1.25rem;
+  color: var(--text-color);
+  transition: opacity 0.3s ease;
+}
+
+#theme-toggle:hover {
+  opacity: 0.7;
+}
+
+/* Terminal Toggle Button - Moved to bottom right with scroll following */
+.terminal-toggle {
+  position: fixed;
+  bottom: 2rem;
+  right: 2rem;
+  width: 60px;
+  height: 60px;
+  background: linear-gradient(145deg, #2c3e50, #34495e);
+  color: #00ff00;
+  border: 2px solid #00ff00;
+  border-radius: 50%;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 15px rgba(0, 255, 0, 0.3);
+  z-index: 1100;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 0;
+}
+
+.terminal-toggle:hover {
+  background: linear-gradient(145deg, #34495e, #2c3e50);
+  border-color: #66ff66;
+  transform: scale(1.05);
+  box-shadow: 0 6px 20px rgba(0, 255, 0, 0.5);
+}
+
+.terminal-toggle:active {
+  transform: scale(0.95);
+}
+
+.terminal-toggle svg {
+  width: 24px;
+  height: 24px;
+  color: #00ff00;
+  transition: color 0.3s ease;
+}
+
+.terminal-toggle:hover svg {
+  color: #66ff66;
+}
+
+@media screen and (max-width: 600px) {
+  main.cv {
+    padding: 1rem;
+  }
+
+  .download-toggle-container {
+    top: 0.5rem;
+    right: 0.5rem;
+  }
+
+  .terminal-toggle {
+    bottom: 1rem;
+    right: 1rem;
+    width: 50px;
+    height: 50px;
+  }
+
+  .terminal-toggle svg {
+    width: 20px;
+    height: 20px;
+  }
+
+  header .contact {
+    flex-direction: column;
+    gap: 0.3rem;
+    align-items: flex-start;
+  }
+
+  header h1 {
+    font-size: 2rem;
+  }
+
+  .columns {
+    grid-template-columns: 1fr;
+    gap: 1rem;
+  }
+
+  .job h3 {
+    flex-direction: column;
+    gap: 0.25rem;
+  }
+}
