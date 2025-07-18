@@ -8,13 +8,13 @@
   
   @page {
     size: A4;
-    margin: 0.3in 0.5in; /* Reduced to eliminate header/footer space */
+    margin: 0.2in 0.4in; /* REDUCED: Smaller margins to eliminate browser header/footer space */
   }
   
   body {
     font-family: 'Segoe UI', Arial, sans-serif;
-    font-size: 11pt; /* INCREASED: From 10.5pt to 11pt */
-    line-height: 1.3;
+    font-size: 11pt;
+    line-height: 1.35;
     color: #000;
     margin: 0;
     padding: 0;
@@ -29,27 +29,27 @@
   }
   
   header h1 {
-    font-size: 24.5pt; /* INCREASED: +0.5pt */
-    margin-bottom: 6pt;
+    font-size: 24pt;
+    margin-bottom: 8pt;
     text-align: center;
     color: #0077cc;
   }
   
-  /* FIXED: Contact info to prevent line wrapping */
+  /* FIXED: Better contact info layout to prevent GitHub line wrapping */
   .contact {
     display: flex;
     justify-content: space-between;
-    font-size: 9.5pt; /* INCREASED: +0.5pt but kept compact */
-    margin-bottom: 14pt;
+    font-size: 9pt;
+    margin-bottom: 12pt;
     flex-wrap: nowrap;
-    gap: 3pt;
+    gap: 2pt;
     align-items: center;
   }
   
   .contact span {
     white-space: nowrap;
     flex-shrink: 0;
-    font-size: 9.5pt;
+    font-size: 9pt;
   }
   
   .contact-link {
@@ -57,20 +57,22 @@
     align-items: center;
     gap: 1pt;
     flex-shrink: 0;
+    white-space: nowrap;
   }
   
   .contact-link a {
     color: #000;
     text-decoration: none;
-    font-size: 9.5pt;
+    font-size: 9pt;
+    white-space: nowrap;
   }
   
   h2 {
-    font-size: 14.5pt; /* INCREASED: +0.5pt */
+    font-size: 14pt;
     color: #0077cc;
     border-bottom: 1pt solid #0077cc;
     padding-bottom: 2pt;
-    margin-top: 12pt;
+    margin-top: 14pt;
     margin-bottom: 8pt;
   }
   
@@ -88,7 +90,7 @@
   }
   
   .job h3 {
-    font-size: 12.5pt; /* INCREASED: +0.5pt */
+    font-size: 12pt;
     color: #0077cc;
     margin-bottom: 3pt;
     display: block;
@@ -96,14 +98,14 @@
   }
   
   .job h3 span {
-    font-size: 10.5pt; /* INCREASED: +0.5pt */
+    font-size: 10pt;
     color: #666;
     font-weight: normal;
     float: right;
   }
   
   .job p {
-    font-size: 10.5pt; /* INCREASED: +0.5pt */
+    font-size: 10pt;
     font-style: italic;
     margin-bottom: 5pt;
     color: #333;
@@ -113,12 +115,12 @@
   .job ul {
     margin: 0;
     padding-left: 15pt;
-    font-size: 10.5pt; /* INCREASED: +0.5pt */
+    font-size: 10pt;
   }
   
   .job li {
     margin-bottom: 2pt;
-    line-height: 1.25;
+    line-height: 1.3;
   }
   
   .job li strong {
@@ -129,7 +131,7 @@
   .columns {
     display: grid;
     grid-template-columns: 1fr 1fr;
-    gap: 14pt;
+    gap: 12pt;
     margin-top: 0;
     margin-bottom: 6pt;
   }
@@ -140,7 +142,7 @@
   
   .columns h4 {
     color: #0077cc;
-    font-size: 11.5pt; /* INCREASED: +0.5pt */
+    font-size: 11pt;
     margin-bottom: 3pt;
     margin-top: 6pt;
   }
@@ -150,15 +152,16 @@
   }
   
   .columns p {
-    font-size: 10.5pt; /* INCREASED: +0.5pt */
-    margin: 0 0 5pt 0;
+    font-size: 10pt;
+    margin: 0 0 4pt 0;
   }
   
+  /* FIXED: Professional Summary font size standardized */
   .summary p {
-    font-size: 11.5pt; /* INCREASED: +0.5pt */
+    font-size: 10pt; /* REDUCED: From 11pt to 10pt to match other sections */
     margin: 0;
     text-align: justify;
-    line-height: 1.3;
+    line-height: 1.35;
   }
   
   .education ul,
@@ -170,8 +173,8 @@
   .education li,
   .languages li {
     margin-bottom: 2pt;
-    font-size: 9.5pt; /* INCREASED: +0.5pt */
-    line-height: 1.25;
+    font-size: 10pt;
+    line-height: 1.3;
   }
   
   .languages {
@@ -185,7 +188,7 @@
   
   li {
     margin-bottom: 2pt;
-    font-size: 10.5pt; /* INCREASED: +0.5pt */
+    font-size: 10pt;
   }
   
   .job, .columns > div {

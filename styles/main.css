@@ -25,6 +25,7 @@ body {
   margin: 0;
   padding: 0;
   line-height: 1.6;
+  scroll-behavior: smooth;
 }
 
 body.no-scroll {
@@ -95,7 +96,7 @@ section {
 
 .summary {
   text-align: left;
-  font-size: 1.05rem;
+  font-size: 1rem; /* FIXED: Reduced from 1.05rem to 1rem to match other sections */
 }
 
 .summary p {
@@ -230,7 +231,7 @@ section {
   opacity: 0.7;
 }
 
-/* Terminal Toggle Button - Moved to bottom right with scroll following */
+/* Terminal Toggle Button - Bottom right with scroll following */
 .terminal-toggle {
   position: fixed;
   bottom: 2rem;
@@ -271,6 +272,13 @@ section {
 
 .terminal-toggle:hover svg {
   color: #66ff66;
+}
+
+/* Performance optimizations */
+img {
+  max-width: 100%;
+  height: auto;
+  loading: lazy;
 }
 
 @media screen and (max-width: 600px) {

@@ -1,0 +1,16 @@
+{
+  "name": "Konstantinos Tsanaktsis - Backend Developer",
+  "short_name": "Tsanaktsis CV",
+  "description": "Interactive CV of Konstantinos Tsanaktsis, Backend Developer",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#121212",
+  "theme_color": "#4ea8de",
+  "icons": [
+    {
+      "src": "data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTkyIiBoZWlnaHQ9IjE5MiIgdmlld0JveD0iMCAwIDI0IDI0IiBmaWxsPSIjNGVhOGRlIj4KICA8cGF0aCBkPSJNMjAsN0g0VjE5SDIwVjdaIi8+CiAgPHBhdGggZD0iTTEzLDE3SDEwVjE1SDEzWiIvPgogIDxwYXRoIGQ9Ik0xMSwxM0g2VjExSDExWiIvPgo8L3N2Zz4K",
+      "sizes": "192x192",
+      "type": "image/svg+xml"
+    }
+  ]
+}

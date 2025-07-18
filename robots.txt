@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://kostastsanak.github.io/my-cv/sitemap.xml
