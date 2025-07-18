@@ -1,5 +1,6 @@
 document.addEventListener('DOMContentLoaded', function() {
     const themeToggle = document.getElementById('theme-toggle');
+    const downloadBtn = document.getElementById('download-btn');
     const terminalToggle = document.getElementById('terminal-toggle');
     const terminalContainer = document.getElementById('terminal-container');
     const terminalClose = document.getElementById('terminal-close');
@@ -11,7 +12,8 @@ document.addEventListener('DOMContentLoaded', function() {
     // Matrix rain animation
     function createMatrixRain() {
         const characters = '0123456789ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz!@#$%^&*()_+-=[]{}|;:,.<>?';
-        const columns = Math.floor(window.innerWidth / 20);
+        const containerRect = terminalContainer.getBoundingClientRect();
+        const columns = Math.floor(containerRect.width / 20);
         
         matrixRain.innerHTML = '';
         
@@ -33,17 +35,43 @@ document.addEventListener('DOMContentLoaded', function() {
         }
     }
 
-    // SIMPLIFIED focus function
-    function focusTerminalInput() {
-        if (terminalContainer.classList.contains('active')) {
-            terminalInput.focus();
-        }
-    }
-
     // Theme toggle
     themeToggle.addEventListener('click', function() {
         document.body.classList.toggle('dark');
         themeToggle.textContent = document.body.classList.contains('dark') ? '☀️' : '🌙';
+    });
+
+    // Fixed PDF Download functionality
+    downloadBtn.addEventListener('click', function() {
+        // Method 1: Generate PDF using browser's print function
+        const printWindow = window.open('', '_blank');
+        printWindow.document.write(`
+            <!DOCTYPE html>
+            <html>
+            <head>
+                <title>Konstantinos Tsanaktsis - CV</title>
+                <style>
+                    ${document.querySelector('style') ? document.querySelector('style').innerHTML : ''}
+                    body { font-family: 'Segoe UI', Arial, sans-serif; margin: 0; padding: 20px; }
+                    .download-toggle-container, .terminal-toggle { display: none !important; }
+                    .terminal-container, .terminal-overlay { display: none !important; }
+                    @media print {
+                        .terminal-toggle { display: flex !important; }
+                    }
+                </style>
+            </head>
+            <body>
+                ${document.querySelector('main.cv').outerHTML}
+            </body>
+            </html>
+        `);
+        printWindow.document.close();
+        
+        // Wait for content to load then trigger print
+        setTimeout(() => {
+            printWindow.print();
+            printWindow.close();
+        }, 500);
     });
 
     // Function to reset terminal to starting state
@@ -52,7 +80,7 @@ document.addEventListener('DOMContentLoaded', function() {
         terminalOutput.scrollTop = terminalOutput.scrollHeight;
     }
 
-    // SIMPLIFIED terminal toggle
+    // Terminal toggle
     terminalToggle.addEventListener('click', function() {
         terminalContainer.classList.remove('closing');
         terminalContainer.classList.add('active');
@@ -61,11 +89,17 @@ document.addEventListener('DOMContentLoaded', function() {
         terminalOverlay.classList.remove('hidden');
         document.body.classList.add('no-scroll');
         
-        createMatrixRain();
+        // Create matrix rain immediately when terminal opens
+        setTimeout(() => {
+            createMatrixRain();
+        }, 100);
+        
         resetTerminal();
         
-        // IMMEDIATE focus - no delays
-        terminalInput.focus();
+        // Focus input after a short delay
+        setTimeout(() => {
+            terminalInput.focus();
+        }, 200);
     });
 
     // Close terminal
@@ -97,19 +131,16 @@ document.addEventListener('DOMContentLoaded', function() {
         }
     });
 
-    // SIMPLIFIED click handlers - focus on ANY click when terminal is active
-    document.addEventListener('click', function(e) {
-        if (terminalContainer.classList.contains('active')) {
-            if (e.target !== terminalClose) {
-                e.preventDefault();
-                terminalInput.focus();
-            }
+    // Click handling for terminal focus
+    terminalContainer.addEventListener('click', function(e) {
+        if (e.target === terminalContainer || e.target === terminalOutput) {
+            terminalInput.focus();
         }
     });
 
     // Focus on any key press when terminal is active
     document.addEventListener('keydown', function(e) {
-        if (terminalContainer.classList.contains('active') && e.target !== terminalInput) {
+        if (terminalContainer.classList.contains('active') && e.target !== terminalInput && e.key !== 'Escape') {
             terminalInput.focus();
         }
     });
@@ -117,7 +148,7 @@ document.addEventListener('DOMContentLoaded', function() {
     // Update matrix rain on window resize
     window.addEventListener('resize', function() {
         if (terminalContainer.classList.contains('active')) {
-            createMatrixRain();
+            setTimeout(createMatrixRain, 100);
         }
     });
 
