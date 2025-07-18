@@ -54,3 +54,4 @@ class CVApp {
 document.addEventListener('DOMContentLoaded', () => {
     window.cvApp = new CVApp();
 });
+
