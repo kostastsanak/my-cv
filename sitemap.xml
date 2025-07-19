@@ -4,5 +4,12 @@
     <loc>https://kostastsanak.github.io/my-cv/</loc>
     <lastmod>2025-07-18</lastmod>
     <priority>1.0</priority>
+    <changefreq>monthly</changefreq>
+  </url>
+  <url>
+    <loc>https://kostastsanak.github.io/my-cv/google-site-verification.html</loc>
+    <lastmod>2025-07-18</lastmod>
+    <priority>0.5</priority>
+    <changefreq>yearly</changefreq>
   </url>
 </urlset>

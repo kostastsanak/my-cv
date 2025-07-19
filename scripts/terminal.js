@@ -56,17 +56,17 @@ Backend developer with 2+ years of professional experience in C# and cloud techn
                 action: () => {
                     return `TECHNICAL SKILLS:
 
-Core Languages:
+Languages:
 • C#, Python, Bash, SQL
 
 Cloud & Infrastructure:
-• Azure, Kubernetes, Docker, Terraform, Azure DevOps
+• Azure, Kubernetes, Docker, Terraform
 
-Specialized Tools:
+Tools:
 • Stripe, Meta/Google Ads APIs, Celery, RabbitMQ, OpenResty, Nginx
 
-Backend Technologies:
-• Django, PostgreSQL, MySQL, REST APIs, JWT, LINQ`;
+Technologies:
+• Django, PostgreSQL, MySQL, REST APIs, JWT, LINQ, .NET, Azure DevOps`;
                 }
             },
             education: {
@@ -74,12 +74,12 @@ Backend Technologies:
                     return `EDUCATION & SERVICE:
 
 Computer Science BSc
-University of Crete (2018 – 2023)
+University of Crete (September 2018 – December 2023)
 • Completed comprehensive computer science curriculum
 • Specialized in backend development and systems programming
 
 Greek Military Service
-Cyprus (2024 – 2025)
+Cyprus (November 2024 – July 2025)
 • Completed mandatory military service`;
                 }
             },
@@ -98,7 +98,8 @@ GitHub: github.com/tsanaktsis`;
                     return `MILITARY SERVICE:
 
 Greek Military Service in Cyprus
-Completed mandatory military service (2024 – 2025)`;
+November 2024 – July 2025
+• Completed mandatory military service`;
                 }
             },
             languages: {

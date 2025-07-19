@@ -41,7 +41,17 @@ main.cv {
 header h1 {
   text-align: center;
   font-size: 2.5rem;
+  margin-bottom: 0.5rem;
+}
+
+/* NEW: Name variations styling */
+.name-variations {
+  text-align: center;
+  font-size: 1rem;
+  color: var(--accent-color);
   margin-bottom: 1rem;
+  font-style: italic;
+  opacity: 0.8;
 }
 
 h1, h2, h3 {
@@ -96,7 +106,7 @@ section {
 
 .summary {
   text-align: left;
-  font-size: 1rem; /* FIXED: Reduced from 1.05rem to 1rem to match other sections */
+  font-size: 1rem;
 }
 
 .summary p {
@@ -171,15 +181,56 @@ section {
   font-size: 0.95rem;
 }
 
-.education ul,
+/* Education item styling to match job format */
+.education-item {
+  margin-bottom: 1.2rem;
+}
+
+.education-item:last-child {
+  margin-bottom: 0;
+}
+
+.education-item h4 {
+  font-size: 1.1rem;
+  margin-bottom: 0.3rem;
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  color: var(--accent-color);
+  margin-top: 0;
+  font-weight: 600;
+}
+
+.education-item h4 span {
+  font-size: 0.9rem;
+  color: var(--text-color);
+  font-weight: normal;
+}
+
+.education-item p {
+  margin: 0;
+  color: var(--text-color);
+  font-style: italic;
+}
+
 .languages ul {
   margin: 0;
   padding-left: 1.2rem;
 }
 
-.education li,
 .languages li {
   margin-bottom: 0.3rem;
+}
+
+/* NEW: SEO Footer styling */
+.seo-footer {
+  text-align: center;
+  margin-top: 2rem;
+  padding: 1rem;
+  font-size: 0.85rem;
+  color: var(--text-color);
+  opacity: 0.7;
+  border-top: 1px solid var(--accent-color);
 }
 
 .download-toggle-container {
@@ -319,6 +370,11 @@ img {
   }
 
   .job h3 {
+    flex-direction: column;
+    gap: 0.25rem;
+  }
+
+  .education-item h4 {
     flex-direction: column;
     gap: 0.25rem;
   }
