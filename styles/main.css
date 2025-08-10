@@ -222,6 +222,16 @@ section {
   margin-bottom: 0.3rem;
 }
 
+.tech-link {
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.tech-link strong {
+  color: var(--highlight-color);
+  font-weight: 600;
+}
+
 /* NEW: SEO Footer styling */
 .seo-footer {
   text-align: center;
