@@ -90,7 +90,7 @@ Cyprus (November 2024 – July 2025)
 Phone: (+30) 6987325635
 Email: konstantinos.tsanaktsis@gmail.com
 LinkedIn: linkedin.com/in/ktsanaktsis
-GitHub: github.com/tsanaktsis`;
+GitHub: github.com/kostastsanak`;
                 }
             },
             military: {
